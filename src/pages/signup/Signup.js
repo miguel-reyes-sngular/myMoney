@@ -10,7 +10,6 @@ export const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password, displayName)
     signup(email, password, displayName)
   }
 
