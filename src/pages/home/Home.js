@@ -7,7 +7,10 @@ import HomeStyles from './Home.module.css'
 
 export const Home = () => {
   const { user } = useAuthContext()
-  const { documents, error } = useCollection('transactions')
+  const { documents, error } = useCollection(
+    'transactions',
+    ['uid', '==', user.uid]
+  )
 
   return (
     <div className={HomeStyles.container}>
